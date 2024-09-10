@@ -28,7 +28,7 @@ public class MinhaPilha {
       return pilha[nElementos];
   }
 
-  // top(): retorna, mas não remove, o elemento do topo da pilha (erro se a pilha estiver vazia)
+  // top(): retorna, mas Não remove, o elemento do topo da pilha (erro se a pilha estiver vazia)
   public int top() {
       if (nElementos > 0)
           return pilha[nElementos - 1];

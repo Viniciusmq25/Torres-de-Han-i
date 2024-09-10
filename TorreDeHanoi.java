@@ -9,16 +9,16 @@ public class TorreDeHanoi {
         System.out.println("Quabra cabeça das Torres de Hanoi!");
         System.out.println("""
 
-        O objetivo é mover uma coluna de números de diferentes tamanhos de uma coluna para outra, 
-        utilizando uma coluna intermediária, respeitando as seguintes regras:
+        O objetivo é mover uma coluna de numeros de diferentes tamanhos de uma coluna para outra, 
+        utilizando uma coluna intermediaria, respeitando as seguintes regras:
 
-        1. Apenas um números pode ser movido por vez.
+        1. Apenas um numeros pode ser movido por vez.
         2. Um número maior nunca pode ser colocado sobre um número menor.
-        3. Todos os números devem estar empilhados em ordem decrescente de tamanho em uma das colunas ao final do processo.
+        3. Todos os numeros devem estar empilhados em ordem decrescente de tamanho em uma das colunas ao final do processo.
 
         Comece o jogo:
         """);
-        System.out.println("Quantos números voce deseja usar? (quanto mais números, mais demorado!)");
+        System.out.println("Quantos numeros voce deseja usar? (quanto mais numeros, mais demorado!)");
         int numDiscos = scanner.nextInt();
 
         TorreDeHanoi jogo = new TorreDeHanoi(numDiscos);
@@ -38,7 +38,7 @@ public class TorreDeHanoi {
         } else {
             pulaLinha();
             divisor();
-            System.out.println("Este modo não existe!");
+            System.out.println("Este modo nao existe!");
             divisor();
         }
     }
@@ -77,12 +77,12 @@ public class TorreDeHanoi {
     private boolean moveDisco(int origem, int destino) {
         if (hastes[origem].isEmpty()) {
             divisor();
-            System.out.println("Erro: Não tem nenhum numero na haste " + (origem+1) + "!");
+            System.out.println("Erro: nao tem nenhum numero na haste " + (origem+1) + "!");
             divisor();
             return false;
         } else if (!hastes[destino].isEmpty() && hastes[destino].top() < hastes[origem].top()) {
             divisor();
-            System.out.println("Erro: Não é permitido colocar um numero maior sobre um numero menor!");
+            System.out.println("Erro: nao é permitido colocar um numero maior sobre um numero menor!");
             divisor();
             return false;
         } else {
@@ -116,7 +116,7 @@ public class TorreDeHanoi {
         mostraHastes();
         pulaLinha();
         divisor();
-        System.out.println("Parabéns! Você concluiu o jogo em " + numJogadas + " jogadas!");
+        System.out.println("Parabens! Voce concluiu o jogo em " + numJogadas + " jogadas!");
         divisor();
     }
 
