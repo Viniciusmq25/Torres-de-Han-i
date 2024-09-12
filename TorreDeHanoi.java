@@ -66,12 +66,11 @@ public class TorreDeHanoi {
         for (int i = 0; i < 3; i++) {
             System.out.print("Haste " + (i+1) + ": ");
             int[] elementos = hastes[i].getElements();
-            for (int elemento : elementos) {
-                System.out.print(elemento + " ");
-            }
+            for (int j = 0; j < elementos.length; j++) {
+              System.out.print(elementos[j] + " ");
+          }
             System.out.println();
         }
-    
     }
 
     private boolean moveDisco(int origem, int destino) {
